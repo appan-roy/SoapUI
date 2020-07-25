@@ -1,0 +1,47 @@
+Status: OK
+Time Taken: 386
+Size: 1206
+Timestamp: Sat Jul 25 13:32:32 IST 2020
+TestStep: GetCountriesByName
+
+----------------- Messages ------------------------------
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://restcountries.eu
+Method: GET
+StatusCode: 200
+URL: https://restcountries.eu/rest/v2/name/brazil
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.5.5 (Java/12.0.1)]
+Host: [restcountries.eu]
+Accept-Encoding: [gzip,deflate]
+
+GET https://restcountries.eu/rest/v2/name/brazil HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: restcountries.eu
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.5 (Java/12.0.1)
+
+
+---------------- Response --------------------------
+Transfer-Encoding: [chunked]
+Server: [cloudflare]
+CF-RAY: [5b845c037d371918-SIN]
+Access-Control-Allow-Origin: [*]
+Access-Control-Allow-Methods: [GET]
+Connection: [keep-alive]
+Date: [Sat, 25 Jul 2020 08:02:34 GMT]
+Access-Control-Allow-Headers: [Accept, X-Requested-With]
+CF-Cache-Status: [DYNAMIC]
+Cache-Control: [public, max-age=86400]
+Content-Encoding: [gzip]
+Set-Cookie: [__cfduid=dcfcdc769c7d9bde97d4c8c9862a163831595664154; expires=Mon, 24-Aug-20 08:02:34 GMT; path=/; domain=.restcountries.eu; HttpOnly; SameSite=Lax]
+#status#: [HTTP/1.1 200 ]
+Content-Type: [application/json;charset=utf-8]
+cf-request-id: [042697d62e00001918b6a9e200000001]
+Expect-CT: [max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"]
+
+[{"name":"Brazil","topLevelDomain":[".br"],"alpha2Code":"BR","alpha3Code":"BRA","callingCodes":["55"],"capital":"Brasília","altSpellings":["BR","Brasil","Federative Republic of Brazil","República Federativa do Brasil"],"region":"Americas","subregion":"South America","population":206135893,"latlng":[-10.0,-55.0],"demonym":"Brazilian","area":8515767.0,"gini":54.7,"timezones":["UTC-05:00","UTC-04:00","UTC-03:00","UTC-02:00"],"borders":["ARG","BOL","COL","GUF","GUY","PRY","PER","SUR","URY","VEN"],"nativeName":"Brasil","numericCode":"076","currencies":[{"code":"BRL","name":"Brazilian real","symbol":"R$"}],"languages":[{"iso639_1":"pt","iso639_2":"por","name":"Portuguese","nativeName":"Português"}],"translations":{"de":"Brasilien","es":"Brasil","fr":"Brésil","ja":"????","it":"Brasile","br":"Brasil","pt":"Brasil","nl":"Brazilië","hr":"Brazil","fa":"?????"},"flag":"https://restcountries.eu/data/bra.svg","regionalBlocs":[{"acronym":"USAN","name":"Union of South American Nations","otherAcronyms":["UNASUR","UNASUL","UZAN"],"otherNames":["Unión de Naciones Suramericanas","União de Nações Sul-Americanas","Unie van Zuid-Amerikaanse Naties","South American Union"]}],"cioc":"BRA"}]

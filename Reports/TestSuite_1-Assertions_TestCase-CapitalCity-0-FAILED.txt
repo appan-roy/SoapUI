@@ -1,0 +1,55 @@
+Status: FAILED
+Time Taken: 6514
+Size: 336
+Timestamp: Sat Jul 25 19:20:54 IST 2020
+TestStep: CapitalCity
+
+----------------- Messages ------------------------------
+[Response SLA] Response did not meet SLA 3681/2000
+[Script Assertion] assert messageExchange.timeTaken <2000
+       |               |         |
+       |               3681      false
+       com.eviware.soapui.impl.wsdl.teststeps.WsdlResponseMessageExchange@2f1f9515
+
+----------------- Properties ------------------------------
+Endpoint: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso
+Encoding: UTF-8
+
+---------------- Request ---------------------------
+Request Headers: SOAPAction : ""
+Connection : Keep-Alive
+User-Agent : Apache-HttpClient/4.5.5 (Java/12.0.1)
+Host : webservices.oorsprong.org
+Accept-Encoding : gzip,deflate
+Content-Length : 325
+Content-Type : text/xml;charset=UTF-8
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:CapitalCity>
+         <web:sCountryISOCode>IN</web:sCountryISOCode>
+      </web:CapitalCity>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+---------------- Response --------------------------
+Response Headers: Cache-Control : private, max-age=0
+Server : Microsoft-IIS/8.5
+Content-Encoding : gzip
+Vary : Accept-Encoding
+Web-Service : DataFlex 19.1
+#status# : HTTP/1.1 200 OK
+Content-Length : 311
+Date : Sat, 25 Jul 2020 13:50:57 GMT
+Content-Type : text/xml; charset=utf-8
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <m:CapitalCityResponse xmlns:m="http://www.oorsprong.org/websamples.countryinfo">
+         <m:CapitalCityResult>New Delhi</m:CapitalCityResult>
+      </m:CapitalCityResponse>
+   </soap:Body>
+</soap:Envelope>

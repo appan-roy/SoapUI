@@ -1,0 +1,8 @@
+Status: OK
+Time Taken: 688
+Size: 0
+Timestamp: Sat Jul 25 13:23:34 IST 2020
+TestStep: GetSetProperties
+
+----------------- Messages ------------------------------
+Script-result: {countryCode=com.eviware.soapui.impl.wsdl.support.XmlBeansPropertiesTestPropertyHolder$PropertiesStepProperty@149319e0}

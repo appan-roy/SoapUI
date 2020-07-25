@@ -1,0 +1,18 @@
+Status: OK
+Time Taken: 877
+Size: 0
+Timestamp: Sat Jul 25 13:23:36 IST 2020
+TestStep: Property Transfer
+
+----------------- Messages ------------------------------
+Performed transfer [countryISOCode]
+----------------------------------------------------
+countryISOCode transferred [[ZA]] from [CountryISOCode.Response] to [CapitalCity.Request]
+------------ source path -------------
+declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://www.oorsprong.org/websamples.countryinfo';
+//*:CountryISOCodeResult
+------------ target path -------------
+declare namespace soap='http://www.w3.org/2003/05/soap-envelope';
+declare namespace ns1='http://www.oorsprong.org/websamples.countryinfo';
+//*:sCountryISOCode
