@@ -1,7 +1,0 @@
-Status: OK
-Time Taken: 1113
-Size: 0
-Timestamp: Sat Jul 25 13:23:33 IST 2020
-TestStep: LogProperties
-
------------------ Messages ------------------------------

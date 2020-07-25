@@ -25,7 +25,7 @@
   <con:entry key="Environment" value="Default"/>
   <con:entry key="Coverage Report" value="false"/>
   <con:entry key="Enable UI" value="false"/>
-  <con:entry key="Root Folder" value="E:\Softwares\My PC Apps\SoapUI\Workspace\Reports"/>
+  <con:entry key="Root Folder" value="E:\Softwares\My PC Apps\SoapUI\SOAP Reports"/>
   <con:entry key="Ignore Errors" value="false"/>
   <con:entry key="Domain" value=""/>
   <con:entry key="Tool Args" value=""/>

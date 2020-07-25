@@ -7,7 +7,7 @@
   <con:entry key="Save After" value="false"/>
   <con:entry key="Add Settings" value="false"/>
   <con:entry key="WSS Password Type" value=""/>
-  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="TestSuite" value="TestSuite_1"/>
   <con:entry key="Endpoint" value=""/>
   <con:entry key="Select Report Type" value=""/>
   <con:entry key="System Properties" value=""/>
@@ -18,14 +18,14 @@
   <con:entry key="Global Properties" value=""/>
   <con:entry key="Project Properties" value=""/>
   <con:entry key="Project Password" value=""/>
-  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="TestCase" value="Assertions TestCase"/>
   <con:entry key="Username" value=""/>
   <con:entry key="user-settings.xml Password" value=""/>
   <con:entry key="TestRunner Path" value=""/>
   <con:entry key="Environment" value="Default"/>
   <con:entry key="Coverage Report" value="false"/>
   <con:entry key="Enable UI" value="false"/>
-  <con:entry key="Root Folder" value="E:\Softwares\My PC Apps\SoapUI\Workspace\REST Reports"/>
+  <con:entry key="Root Folder" value="E:\Softwares\My PC Apps\SoapUI\REST Reports"/>
   <con:entry key="Ignore Errors" value="false"/>
   <con:entry key="Domain" value=""/>
   <con:entry key="Tool Args" value=""/>
