@@ -1,0 +1,5 @@
+"Test Suite","Test Case","Test Step","Step Type","Step Status","Result message","Execution Date"
+"TestSuite_1","ChainingTestCase_2","AddResult","request","OK","","25-Jul-2020 23_50",
+"TestSuite_1","ChainingTestCase_2","Chaining Script","groovy","OK","","25-Jul-2020 23_50",
+"TestSuite_1","ChainingTestCase_2","MyProperties","properties","OK","","25-Jul-2020 23_50",
+"TestSuite_1","ChainingTestCase_2","MultiplyResult","request","OK","","25-Jul-2020 23_50",
