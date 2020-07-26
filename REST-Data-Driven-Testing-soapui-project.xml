@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dd70a625-6801-487f-a6e4-818a7920e3ae" activeEnvironment="Default" name="REST Data Driven Testing" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="c6c67262-3f40-47f6-b566-f625b061f147" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:3000" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:3000</con:endpoint></con:endpoints><con:resource name="Users" path="/users/" id="ea78491f-1958-4168-bedc-9ea1b85fa0ca"><con:settings/><con:parameters/><con:method name="Users 1" id="292768c5-05b8-4b2b-a71d-1ac99b92acfc" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200 201</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>400</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="CreateUser" id="39a85816-efcc-4a74-a57a-e02d6c485fae" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request>{
+      "firstName": "Boris",
+      "lastName": "Gelfand",
+      "fideRating": 2762,
+      "id": 22
+    }</con:request><con:originalUri>http://localhost/users</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="874e00a0-19c2-49c9-931f-4fda61099811" name="DataDrivenSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0d7b13fe-0af7-4f6c-a983-39b26dbbb2d2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DataDrivenTestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="ExcelUtilDDT" id="c4bc8b55-9dd7-4898-b4cb-1e2e2aba9e9e"><con:settings/><con:config><script>/*
+ * Run this script only for Create Users. DO NOT run the complete test case for avoiding duplicacy
+ */
+
+import jxl.*
+import jxl.write.*
+import com.eviware.soapui.support.XmlHolder
+
+Workbook wb = Workbook.getWorkbook(new File("E:\\Softwares\\My PC Apps\\SoapUI\\Test Data\\RESTData.xls"))
+Sheet sht = wb.getSheet(0)
+
+def rowCount = sht.getRows()
+def colCount = sht.getColumns()
+
+for(i=1; i&lt;rowCount; i++){
+	
+	fname = sht.getCell(0,i).getContents().toString()		//(col, row) format
+	lname = sht.getCell(1,i).getContents().toString()
+	rating = sht.getCell(2,i).getContents().toString()
+	id = sht.getCell(3,i).getContents().toString()
+
+	testRunner.testCase.setPropertyValue("FirstName", fname)
+	testRunner.testCase.setPropertyValue("LastName", lname)
+	testRunner.testCase.setPropertyValue("FideRating", rating)
+	testRunner.testCase.setPropertyValue("Id", id)
+	
+	testRunner.runTestStepByName('CreateUser')
+	
+}
+
+</script></con:config></con:testStep><con:testStep type="restrequest" name="CreateUser" id="79ee84af-97e2-41ad-9dfd-e0396d4f08d4"><con:settings/><con:config service="http://localhost:3000" resourcePath="/users/" methodName="Users 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CreateUser" id="39a85816-efcc-4a74-a57a-e02d6c485fae" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">true</con:setting></con:settings><con:endpoint>http://localhost:3000</con:endpoint><con:request>{
+      "firstName": "${#TestCase#FirstName}",
+      "lastName": "${#TestCase#LastName}",
+      "fideRating": ${#TestCase#FideRating},
+      "id": ${#TestCase#Id}
+    }</con:request><con:originalUri>http://localhost/users</con:originalUri><con:assertion type="Simple Contains" id="4d9cbdf2-209e-486a-8c26-2e781ce6af88" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="9c658412-aaf0-417a-b1d2-8289e84b8977"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="b788467e-a7fc-467a-ac44-86f19abca59a" name="ContainsFirstName"><con:configuration><token>${#TestCase#FirstName}</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:properties><con:property><con:name>FirstName</con:name><con:value>Ding</con:value></con:property><con:property><con:name>LastName</con:name><con:value>Liren</con:value></con:property><con:property><con:name>FideRating</con:name><con:value>2791</con:value></con:property><con:property><con:name>Id</con:name><con:value>25</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
